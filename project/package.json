@@ -1,0 +1,21 @@
+{
+  "name": "apothecary-shop",
+  "version": "1.0.0",
+  "description": "Pharmaceutical Inventory System",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd ApothecaryShopserver && npm run dev",
+    "client": "cd ApothecaryShopUI && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd ApothecaryShopserver && npm install && cd ../ApothecaryShopUI && npm install",
+    "update-all": "cd ApothecaryShopserver && npx npm-check-updates -u && npm install && cd ../ApothecaryShopUI && npx npm-check-updates -u && npm install"
+  },
+  "dependencies": {
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^7.3.1"
+  }
+}
